@@ -17,6 +17,8 @@ chgrp -R root /opt/proofpoint/collectd
 mkdir /etc/collectd
 cp /opt/proofpoint/collectd/distribute/collectd.conf /etc/collectd
 
+# Replace hostaname property in cassandra.conf
+
 # Add links
 sudo ln --symbolic /opt/proofpoint/collectd/sbin/collectd /usr/sbin/collectd
 sudo ln --symbolic /opt/proofpoint/collectd/sbin/collectdmon /usr/sbin/collectdmon
