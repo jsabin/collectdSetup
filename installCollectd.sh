@@ -18,6 +18,7 @@ mkdir /etc/collectd
 cp /opt/proofpoint/collectd/distribute/collectd.conf /etc/collectd
 
 # Replace hostaname property in cassandra.conf
+sed -i s/HOST_NAME/`hostname`/g /opt/proofpoint/collectd/etc/collectd.d/cassandra.conf
 
 # Add links
 sudo ln --symbolic /opt/proofpoint/collectd/sbin/collectd /usr/sbin/collectd
