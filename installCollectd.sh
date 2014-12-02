@@ -10,7 +10,7 @@ wget https://raw.githubusercontent.com/jsabin/collectdSetup/master/collectd.gzip
 # Extract zip
 pushd /
 tar xvfz $cwd/collectd.gzip
-chmod -R root /opt/proofpoint/collectd
+chown -R root /opt/proofpoint/collectd
 chgrp -R root /opt/proofpoint/collectd
 
 # Copy config file
