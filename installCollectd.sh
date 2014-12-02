@@ -20,6 +20,9 @@ cp /opt/proofpoint/collectd/distribute/collectd.conf /etc/collectd
 # Replace hostaname property in cassandra.conf
 sed -i s/HOST_NAME/`hostname`/g /opt/proofpoint/collectd/etc/collectd.d/cassandra.conf
 
+# Replace kairos host in kairosdb.conf
+sed -i 's/KAIROSDB_HOST/http://pulse-2107208448.us-east-1.elb.amazonaws.com:8080/g /opt/proofpoint/collectd/etc/collectd.d/kairosdb.conf'
+
 # Add links
 sudo ln --symbolic /opt/proofpoint/collectd/sbin/collectd /usr/sbin/collectd
 sudo ln --symbolic /opt/proofpoint/collectd/sbin/collectdmon /usr/sbin/collectdmon
