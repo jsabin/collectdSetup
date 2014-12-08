@@ -4,6 +4,9 @@
 
 cwd=$(pwd)
 
+# Get zip file
+wget https://raw.githubusercontent.com/jsabin/collectdSetup/master/collectd.gzip
+
 # Extract zip
 pushd /
 tar xvfz $cwd/collectd.gzip
